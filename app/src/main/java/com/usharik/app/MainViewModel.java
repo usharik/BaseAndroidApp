@@ -1,9 +1,7 @@
 package com.usharik.app;
 
 import android.databinding.Bindable;
-
 import com.usharik.app.framework.ViewModelObservable;
-import com.usharik.app.BR;
 
 import javax.inject.Inject;
 
@@ -12,6 +10,7 @@ import javax.inject.Inject;
  */
 
 public class MainViewModel extends ViewModelObservable {
+
     private final AppState appState;
     private String text;
 

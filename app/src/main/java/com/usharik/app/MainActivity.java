@@ -2,10 +2,8 @@ package com.usharik.app;
 
 import android.databinding.DataBindingUtil;
 import android.support.design.widget.BottomNavigationView;
-
-import com.usharik.app.framework.ViewActivity;
-import com.usharik.app.R;
 import com.usharik.app.databinding.ActivityMainBinding;
+import com.usharik.app.framework.ViewActivity;
 
 public class MainActivity extends ViewActivity<MainViewModel> {
 
@@ -13,19 +11,19 @@ public class MainActivity extends ViewActivity<MainViewModel> {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = item -> {
-                switch (item.getItemId()) {
-                    case R.id.navigation_home:
-                        getViewModel().setText(getResources().getString(R.string.title_home));
-                        return true;
-                    case R.id.navigation_dashboard:
-                        getViewModel().setText(getResources().getString(R.string.title_dashboard));
-                        return true;
-                    case R.id.navigation_notifications:
-                        getViewModel().setText(getResources().getString(R.string.title_notifications));
-                        return true;
-                }
-                return false;
-            };
+        switch (item.getItemId()) {
+            case R.id.navigation_home:
+                getViewModel().setText(getResources().getString(R.string.title_home));
+                return true;
+            case R.id.navigation_dashboard:
+                getViewModel().setText(getResources().getString(R.string.title_dashboard));
+                return true;
+            case R.id.navigation_notifications:
+                getViewModel().setText(getResources().getString(R.string.title_notifications));
+                return true;
+        }
+        return false;
+    };
 
     @Override
     protected void onResume() {
